@@ -24,7 +24,7 @@
       <e p="Temp\bin" t="ExcludeRecursive" />
       <e p="Unity1.sln" t="IncludeFlat" />
     </e>
-    <e p="C:\Users\dhend\.Rider2019.2\config\extensions" t="IncludeRecursive" />
+    <e p="C:\Users\dhend\.Rider2019.2\config\scratches" t="IncludeRecursive" />
     <e p="C:\Users\dhend\.Rider2019.2\system\extResources" t="IncludeRecursive" />
     <e p="C:\Users\dhend\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_unity1.-1918977924.00" t="ExcludeRecursive" />
   </component>

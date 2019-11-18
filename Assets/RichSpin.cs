@@ -11,6 +11,19 @@ public class RichSpin : MonoBehaviour
         Z
     }
 
+    public enum WorldOrientation
+    {
+        Self,
+        World
+    }
+
+    public WorldOrientation worldOrientation = WorldOrientation.Self;
+
+    private Space getWorldOrientation()
+    {
+        return (worldOrientation == WorldOrientation.Self) ? Space.Self : Space.World;
+    }
+
     public float degreesPerFrame = 5.0f;
 
     public SpinAxis currentAxis = SpinAxis.X;
@@ -26,15 +39,15 @@ public class RichSpin : MonoBehaviour
     {
         if (currentAxis == SpinAxis.X)
         {
-            transform.Rotate(degreesPerFrame,0,0);
+            transform.Rotate(degreesPerFrame, 0, 0, getWorldOrientation());
         }
         else if (currentAxis == SpinAxis.Y)
         {
-            transform.Rotate(0, degreesPerFrame, 0);
+            transform.Rotate(0, degreesPerFrame, 0, getWorldOrientation());
         }
         else
         {
-            transform.Rotate(0,0,degreesPerFrame);
+            transform.Rotate(0,0,degreesPerFrame, getWorldOrientation());
         }
     }
 }
